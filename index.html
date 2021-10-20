@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mastermind</title>
+    <link rel="stylesheet" href="styles.css">
+    <script  src="script.js" defer></script>
+</head>
+
+<body>
+
+<table id="colors_dropdown">
+    <tr>
+        <td id="color1" onclick="changeColor(partie.lastClick1 , 'red')"></td>
+        <td id="color2" onclick="changeColor(partie.lastClick1 , 'blue')"></td>
+        <td id="color3" onclick="changeColor(partie.lastClick1 , 'yellow')"></td>
+        <td id="color4" onclick="changeColor(partie.lastClick1 , 'green')"></td>
+        <td id="color5" onclick="changeColor(partie.lastClick1 , 'orange')"></td>
+    </tr>
+</table>
+
+<div id="top">
+    <div id="menu">
+        
+        <button onClick = "location.reload()"> New Game </button>
+        <h1>Mastermind</h1>
+        <button onClick = "giveAnswer(partie)"> answer</button>
+
+    </div>
+        <div id = table-wrapper>
+        <table id = "information">
+        </table>
+        </div>
+</div> 
+<div id="guess">   
+    <div id = guess_answer>
+    <table id="guess_table">
+            <td id="1" onClick="chooseColor(1,partie)"></td>
+            <td id="2" onClick="chooseColor(2,partie)"></td>
+            <td id="3" onClick="chooseColor(3,partie)"></td>
+            <td id="4" onClick="chooseColor(4,partie)"></td>
+    </table>
+    <button onclick="guess(partie)"> guess</button>
+    </div>
+</div>
+
+</body>
+</html>

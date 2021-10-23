@@ -1,16 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
 html {
     height: 100%;
 }
 
 body {
     display: flex;
-    flex-direction: column;
     justify-content: space-between;
     height: 100%;
-    background-color: grey;
+    background-color: #FFFFFF;
     padding: 0px;
     margin: 0px;
     
+}
+
+#top {
+    width: 50%;
+    height: 100%;
+    background-color: #390066;
+}
+
+#bot {
+    width: 50%;
+    height: 50%;
 }
 
 /* Endroit ou on voit les tentatives */
@@ -89,19 +101,25 @@ button {
     margin: 10px;
 }
 
-#menu {
+ #menu {
     display: flex;
-    justify-content: space-between;
-    background-color:salmon ;
-    height: 10vh;
+    flex-direction: column;
+    justify-content: center;
+
     align-items: center;
 
-}
+} 
 
 h1 {
-    
+    font-family: 'Pacifico', cursive;
     margin: 0;
-    
+    color: #FFFFFF;
+}
+
+h2 {
+    font-family: 'Pacifico', cursive;
+    color: #FFFFFF;
+
 }
 
 .choice_button {

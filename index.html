@@ -24,16 +24,19 @@
 <div id="top">
     <div id="menu">
         
-        <button onClick = "location.reload()"> New Game </button>
         <h1>Mastermind</h1>
+        <h2>Goal of the game </h2>
+        <h3> Guess the correct pattern , in both colors and order</h3>
+        <button onClick = "location.reload()"> New Game </button>
         <button onClick = "giveAnswer(partie)"> answer</button>
 
     </div>
-        <div id = table-wrapper>
-        <table id = "information">
-        </table>
-        </div>
 </div> 
+<div id = "bot">
+<div id = table-wrapper>
+    <table id = "information">
+    </table>
+    </div>
 <div id="guess">   
     <div id = guess_answer>
     <table id="guess_table">
@@ -44,6 +47,7 @@
     </table>
     <button onclick="guess(partie)"> guess</button>
     </div>
+</div>
 </div>
 
 </body>

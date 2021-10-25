@@ -43,6 +43,7 @@ function randomAnswer() {
  for (let i = 0 ; i < 4 ; i++){
      answer[i] = randomColor();
  }
+
  return answer;
 
 }
@@ -52,15 +53,15 @@ function randomAnswer() {
 function randomColor() {
     let x = Math.random();
     if( x <= 0.2)
-        return "red";
+        return "rgb(112, 214, 255)";
     else if( 0.2 < x && x <= 0.4)
-        return "blue";
+        return "rgb(255, 112, 166)";
     else if( 0.4 < x && x <= 0.6)
-        return "yellow";
+        return "rgb(255, 150, 112)";
     else if( 0.6 < x && x <= 0.8)
-        return "green";
+        return "rgb(255, 215, 112)";
     else
-        return "orange";
+        return "rgb(233, 255, 112)";
 }
 
 // choisi la couleur a changer dans les cases des tentatives(en bas)
@@ -84,9 +85,10 @@ function getColor(){
     let color = [];
     
     for(i=0 ; i<4 ; i++){
-        color.push(document.getElementById(`${i+1}`).style.backgroundColor);
+        color.push(document.getElementById(`G${i+1}`).style.backgroundColor);
     }
     return color;
+
 }
 
 // s active lorsque l'on pese sur guess, ajoute une tentative dans information avec les bonnes couleurs
@@ -95,9 +97,10 @@ function getColor(){
 function guess(partie){
 
     let reponse  = getColor();
-
+    console.log(reponse);
+    console.log(partie.reponse);
     let indication  = compareColors(reponse,partie.reponse);
-
+    
     const row = document.createElement('tr');
     
     row.classname = "row";
@@ -148,7 +151,7 @@ function compareColors (x,y){
     }
     misplaced = misplaced - perfect;
     
-    return( perfect +" bien placé et " + misplaced + " mal placé");
+    return(  perfect +  ' &#x2713 ' + misplaced + ' &#x2715 ');
 }
 
 // compte le nombre de chaque couleur dans un array
@@ -156,18 +159,17 @@ function compareColors (x,y){
 function countColors(x){
     let count = [0,0,0,0,0];
     for (i = 0 ; i < 4 ; i++){
-        if(x[i] == "red")
+        if(x[i] == "rgb(112, 214, 255)")
             count[0] += 1;
-        if(x[i] == "blue")
+        if(x[i] == "rgb(255, 112, 166)")
             count[1] += 1;
-        if(x[i] == "yellow")
+        if(x[i] == "rgb(255, 150, 112)")
             count[2] += 1;
-        if(x[i] == "green")
+        if(x[i] == "rgb(255, 215, 112)")
             count[3] += 1;
-        if(x[i] == "orange")
+        if(x[i] == "rgb(233, 255, 112)")
             count[4] += 1;
     }
-    console.log(count);
     return count;
 }
 

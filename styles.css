@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
 
 html {
     height: 100%;
@@ -18,14 +20,27 @@ body {
     width: 50%;
     height: 100%;
     background-color: #390066;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #bot {
     width: 50%;
-    height: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 
 /* Endroit ou on voit les tentatives */
+
+#G1 , #G2 , #G3 , #G4 {
+    height: 80px;
+    width: 80px;
+}
+
+
 table {
   display: flex;
   justify-content: center;
@@ -35,17 +50,23 @@ table {
 
 td {
     border:  2px solid black;
-    height: 50px;
-    width: 50px;
+    height: 35px;
+    width: 35px;
     background-color: white;
+    margin: 5px;
 }
+
+
+
+
 
 .return {
     width: 150px;
+    border-width: 0;
 }
 
 #table-wrapper {
-    height: 72vh;
+    height: 90vh;
     overflow-y: scroll;
     margin: 5px;
 }
@@ -55,17 +76,20 @@ td {
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-spacing: 5px 15px;
+    border-collapse: separate;
 }
 
 /* Barre ou on met les tentatives */
 #guess {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+
     padding: 20px;
-    background-color: seagreen;
     width: auto;
-    height: 10vh;
+}
+
+#guess_table {
+    border-spacing: 15px;
+    border-collapse: separate;
 }
 
 #guess_answer {
@@ -85,13 +109,19 @@ td {
 #colors_dropdown {
     display: none;
     flex-direction: column;
-    position: absolute;
-    top: 70%;
-    left: 70%;
-    border: 2px solid black;
+    align-items: center;
+    border: collapse;
+    background-color: #EEEEEE;
 
+}
 
-    z-index: 2;
+#color_dropdown_table {
+    border-spacing: 10px;
+    border-collapse: separate;
+}
+
+h4 {
+
 }
 
 
@@ -109,17 +139,36 @@ button {
     align-items: center;
 
 } 
-
+/* titre */
 h1 {
     font-family: 'Pacifico', cursive;
-    margin: 0;
+    margin: 32;
     color: #FFFFFF;
+    text-shadow: 4px 4px 0px rgba(255,255,255,0.25);
+    font-size: 100px;
+    font-weight: 400;
 }
 
 h2 {
     font-family: 'Pacifico', cursive;
     color: #FFFFFF;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 24px;
 
+}
+
+h3 {
+    color: #FFFFFF;
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 400;
+}
+
+h4 {
+    font-family: 'Roboto', cursive;
+    margin: 0px;
+    font-size: 12px;
 }
 
 .choice_button {
@@ -130,21 +179,31 @@ h2 {
 /*  buttons pour le choix des courleurs (pop up) */
 
 #color1 {
-    background-color: red;
+    background-color: rgb(112, 214, 255);
+    height: 30px;
+    width: 30px;
 }
 
 #color2 {
-    background-color: blue;
+    background-color: rgb(255, 112, 166);
+    height: 30px;
+    width: 30px;
 }
 
 #color3 {
-    background-color:yellow;
+    background-color: rgb(255, 150, 112);
+    height: 30px;
+    width: 30px;
 }
 
 #color4 {
-    background-color: green;
+    background-color: rgb(255, 215, 112);
+    height: 30px;
+    width: 30px;
 }
 
 #color5 {
-    background-color: orange;
+    background-color: rgb(233, 255, 112);
+    height: 30px;
+    width: 30px;
 }

@@ -10,16 +10,19 @@
 </head>
 
 <body>
+<div id = "colors_dropdown">
+    <h4> Pick a color</h4>
+    <table id= "color_dropdown_table">
+        <tr>
+            <td id="color1" onclick="changeColor(partie.lastClick1 , 'rgb(112, 214, 255)')"></td>
+            <td id="color2" onclick="changeColor(partie.lastClick1 , 'rgb(255, 112, 166)')"></td>
+            <td id="color3" onclick="changeColor(partie.lastClick1 , 'rgb(255, 150, 112)')"></td>
+            <td id="color4" onclick="changeColor(partie.lastClick1 , 'rgb(255, 215, 112)')"></td>
+            <td id="color5" onclick="changeColor(partie.lastClick1 , 'rgb(233, 255, 112)')"></td>
+        </tr>
+    </table>
+</div>
 
-<table id="colors_dropdown">
-    <tr>
-        <td id="color1" onclick="changeColor(partie.lastClick1 , 'red')"></td>
-        <td id="color2" onclick="changeColor(partie.lastClick1 , 'blue')"></td>
-        <td id="color3" onclick="changeColor(partie.lastClick1 , 'yellow')"></td>
-        <td id="color4" onclick="changeColor(partie.lastClick1 , 'green')"></td>
-        <td id="color5" onclick="changeColor(partie.lastClick1 , 'orange')"></td>
-    </tr>
-</table>
 
 <div id="top">
     <div id="menu">
@@ -32,22 +35,23 @@
 
     </div>
 </div> 
-<div id = "bot">
-<div id = table-wrapper>
-    <table id = "information">
-    </table>
+<div id = "bot">    
+
+    <div id = table-wrapper>
+        <table id = "information">
+        </table>
     </div>
-<div id="guess">   
-    <div id = guess_answer>
-    <table id="guess_table">
-            <td id="1" onClick="chooseColor(1,partie)"></td>
-            <td id="2" onClick="chooseColor(2,partie)"></td>
-            <td id="3" onClick="chooseColor(3,partie)"></td>
-            <td id="4" onClick="chooseColor(4,partie)"></td>
-    </table>
-    <button onclick="guess(partie)"> guess</button>
+    <div id="guess">   
+        <div id = guess_answer>
+        <table id="guess_table">
+            <td id="G1" onClick="chooseColor('G1',partie)"></td>
+            <td id="G2" onClick="chooseColor('G2',partie)"></td>
+            <td id="G3" onClick="chooseColor('G3',partie)"></td>
+            <td id="G4" onClick="chooseColor('G4',partie)"></td>
+        </table>
+        <button onclick="guess(partie)"> guess</button>
+        </div>
     </div>
-</div>
 </div>
 
 </body>

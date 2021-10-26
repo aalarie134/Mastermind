@@ -63,6 +63,9 @@ td {
 
 }
 
+#header {
+    height: 30px;
+}
 
 
 .return {
@@ -71,9 +74,9 @@ td {
 }
 
 #table-wrapper {
-    height: 69vh;
+    height: 70vh;
     overflow-y: scroll;
-    margin: 50px;
+    margin: 0px;
     margin-right: 0px;
 }
 
@@ -84,6 +87,11 @@ td {
     align-items: center;
     border-spacing: 5px 15px;
     border-collapse: separate;
+}
+
+#top_bot{
+    height: 40px;
+    margin: 0px;
 }
 
 /* Barre ou on met les tentatives */
@@ -155,7 +163,6 @@ button {
     border: none;
     color: black;
     width: 100px;
-    margin: 2px;
 }
 
 #menu {

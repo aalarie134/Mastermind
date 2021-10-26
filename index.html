@@ -18,16 +18,17 @@
         <h2>Goal of the game </h2>
         <h3> Guess the correct pattern , in both colors and order</h3>
         <button onClick = "location.reload()"> New Game </button>
-        <button onClick = "giveAnswer(partie)"> answer</button>
+        
 
     </div>
 </div> 
 <div id = "bot">    
-
+    <button id ='b_answer' onClick = "giveAnswer(partie)"> answer</button>
     <div id = table-wrapper>
         <table id = "information">
         </table>
     </div>
+
 <div id = "en_bas">
     <div id = "colors_dropdown">
         <h4> Pick a color</h4>
@@ -51,7 +52,7 @@
             <td id="G3" onClick="chooseColor('G3',partie)"></td>
             <td id="G4" onClick="chooseColor('G4',partie)"></td>
         </table>
-        <button onclick="guess(partie)"> guess</button>
+        <button id = 'bguess' onclick="guess(partie)"> guess</button>
         </div>
     </div>
 </div>

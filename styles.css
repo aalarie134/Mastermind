@@ -102,6 +102,7 @@ td {
 #guess_answer {
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: 0px;
 }
 
@@ -131,16 +132,30 @@ td {
     
 }
 
-h4 {
 
-}
 
 
 /* buttons  */
 button {
-    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: content-box;
     padding: 20px;
-    
+    border-radius: 12px;
+    color: blanchedalmond;
+    border-color: white;
+    width: 145px;
+    height: 40px;
+}
+#b_answer {
+    display: none;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    color: black;
+    width: 100px;
+    margin: 2px;
 }
 
 #menu {
@@ -148,6 +163,18 @@ button {
     flex-direction: column;
     justify-content: center;
      align-items: center;
+}
+
+#bguess {
+    display: flex;
+    width: 145px;
+    height: 40px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    background: black;
+    color: blanchedalmond;
+
 }
 
 /* titre */

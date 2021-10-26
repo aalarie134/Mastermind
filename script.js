@@ -3,7 +3,7 @@
 class Game {
     constructor(answer){
         this.answer = answer;
-        this.essaies = [];
+        this.essaies = 0;
         this.lastclick =0;
     }
     
@@ -20,19 +20,20 @@ class Game {
     }
 
     set answer(x){
-        this._answer = x 
+        this._answer = x ;
     }
 
     set essaies(x){
-        this._essaies = x;
+        this._essaies = x; 
     }
+
 
     set lastClick2(x){
         this.lastclick = x;
     }
 
-    addEssaies( x ){
-        this.essaies = this.essaies.push(x);
+    addessaies(){
+        this.essaies += 1;
     }
 }
 
@@ -104,7 +105,11 @@ function guess(partie){
     const row = document.createElement('tr');
     
     row.classname = "row";
-
+    for(let i = 0 ; i<4 ; i++){
+        if(reponse[i] == ''){
+            return alert( 'add a color everywhere!!');
+        }
+    }
     row.innerHTML = 
     `<tr>
                 <td></td>
@@ -114,9 +119,14 @@ function guess(partie){
                 <td class = "return">${indication}</td>
     </tr>`
     ;
+    partie.addessaies();
+    console.log(partie.essaies);
+    if(partie.essaies == 6){
+        document.getElementById('b_answer').style.display = "flex";
+    }
     document.getElementById("information").appendChild(row);
     let childrow = row.children;
-    for(i = 0 ; i < 4 ; i++){
+    for(let i = 0 ; i < 4 ; i++){
              childrow[i].style.backgroundColor = reponse[i];
     }
    
